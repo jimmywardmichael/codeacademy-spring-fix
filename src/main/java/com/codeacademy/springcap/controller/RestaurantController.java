@@ -7,6 +7,7 @@ import org.springframework.util.ObjectUtils;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
 
+import java.util.List;
 import java.util.Optional;
 import java.util.regex.Pattern;
 
@@ -22,7 +23,7 @@ public class RestaurantController {
 
     // Insert code here:
     @GetMapping
-    public Iterable<Restaurant> getAllRestaurants() {
+    public List<Restaurant> getAllRestaurants() {
         return restaurantRepository.findAll();
     }
 
